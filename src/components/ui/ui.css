@@ -1,0 +1,54 @@
+
+/* Navbar */
+
+.navbar {
+    align-items: center;
+    /* backdrop-filter: blur(55px); */
+    /* background-color: rgba(0, 0, 0, 0.123); */
+    display: flex;
+    /* width: 100vw; */
+    height: 80px;
+    padding: 0 15px 0 15px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-user {
+    align-items: center;
+    display: flex;
+}
+
+.nav-userinfo {
+    display:grid;
+    padding-left: 15px;
+}
+
+.nav-name {
+    font-size: smaller;
+    padding-bottom: 3px;
+}
+
+.nav-company {
+    color: rgb(107, 107, 107);
+    font-size: small;
+}
+
+
+/* SideBar */
+
+.sidebar {
+    /* background-color: rgba(0, 0, 0, 0.123); */
+    width: 30%;
+    float: left;
+    height: 100%;
+    position: initial;
+}
+
+.sidebar-container{
+    margin: 30px 0 0 40px;
+    position: absolute;
+}
+
+.sidebar-title {
+    margin-top: 80px;
+}

@@ -1,0 +1,8 @@
+html, body {
+    background-color: rgb(221, 221, 221);
+    font-family: 'Sawarabi Mincho', 'IBM Plex Sans', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
