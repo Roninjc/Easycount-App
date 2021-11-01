@@ -3,15 +3,11 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { CardActionArea, Grid } from '@mui/material';
+import { Box } from '@mui/system';
 
+import { useStyles } from '../../hooks/useStyles';
 
-const useStyles = makeStyles({
-    right: {
-        float: 'right',
-    },
-});
 
 export const Iva = () => {
     
@@ -28,19 +24,26 @@ export const Iva = () => {
                         1.234 €
                     </Typography>
                     <hr/>
-                    <Typography variant="body5" color="text.secondary" component="div" display="inline-block" textAlign="left">
-                        Soportado
-                    </Typography>
-                    <Typography variant="body5" color="text.secondary" component="div" display="inline-block" className={ classes.right }>
-                        1.234 €
-                    </Typography>
-                    <br/>
-                    <Typography variant="body5" color="text.secondary" component="div" display="inline" textAlign="left">
-                        Repercutido
-                    </Typography>
-                    <Typography variant="body5" color="text.secondary" component="div" display="inline" className={ classes.right }>
-                        1.234 €
-                    </Typography>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Grid container spacing={2} >
+                            <Grid item xs={6} >
+                                <Typography variant="body5" color="text.secondary" component="div" display="inline-block" textAlign="left">
+                                    Soportado
+                                </Typography>
+                                <Typography variant="body5" color="text.secondary" component="div" display="inline-block" className={ classes.right }>
+                                    1.234 €
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={6} >
+                                <Typography variant="body5" color="text.secondary" component="div" display="inline" textAlign="left">
+                                    Repercutido
+                                </Typography>
+                                <Typography variant="body5" color="text.secondary" component="div" display="inline" className={ classes.right }>
+                                    1.234 €
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                    </Box>
                 </CardContent>
             </CardActionArea>
         </Card>

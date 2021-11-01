@@ -40,7 +40,7 @@ export const DashboardScreen = () => {
                     <Grid item xs={12}>
                         <h2 className="title">Dashboard</h2>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} sm={6}>
                         <Item
                             className="clickable"
                             onClick={ handleClick }
@@ -48,7 +48,7 @@ export const DashboardScreen = () => {
                             <MesActual />
                         </Item>
                     </Grid>
-                    <Grid item xs={6} container spacing={4} direction="column">
+                    <Grid item xs={12} sm={6} container spacing={4} direction="column">
                         <Grid item xs>
                             <Item
                                 className="clickable"
