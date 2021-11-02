@@ -9,4 +9,11 @@ export const useStyles = makeStyles({
     right: {
         float: 'right',
     },
+    h100: {
+        height: '100%',
+    },
+    fitbox: {
+        height: "100%",
+        boxSizing: "border-box",
+    }
 });

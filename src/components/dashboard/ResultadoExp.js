@@ -14,9 +14,9 @@ export const ResultadoExp = () => {
     const classes = useStyles();
 
     return (
-        <Card sx={{ boxShadow: 0 }}>
-            <CardActionArea>
-                <CardContent sx={{ textAlign: 'left' }}>
+        <Card sx={{ boxShadow: 0 }} className={ classes.h100 }>
+            <CardActionArea className={ classes.h100 }>
+                <CardContent sx={{ textAlign: 'left' }} className={ classes.fitbox }>
                     <Typography variant="body5" color="text.secondary">
                         Resultado de explotación
                     </Typography>
