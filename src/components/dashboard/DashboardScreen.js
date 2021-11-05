@@ -1,11 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-import { NavBar } from '../ui/NavBar';
 import { MesActual } from './MesActual';
 import { Iva } from './Iva';
 import { ResultadoExp } from './ResultadoExp';
@@ -15,15 +15,13 @@ import './grid.css';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
-    padding: theme.spacing(1),
+    padding: theme.spacing(0),
     textAlign: 'center',
     color: theme.palette.text.secondary,
     boxShadow: '0 1px 10px 1px rgb(0, 0, 0, .09)',
     height: '100%',
-    padding: '0',
     borderRadius: '20px',
     overflow: 'hidden',
-    //   display: 'grid',
 }));
 
 export const DashboardScreen = () => {
@@ -31,22 +29,26 @@ export const DashboardScreen = () => {
     const handleClick = () => {
         console.log('click');
     };
+    const handleClickCurrentMonth = () => {
+        console.log('month');
+    };
 
     return (
         <>
-            <NavBar />
             <Box sx={{ flexGrow: 1, padding: '20px 5vw' }}>
                 <Grid container spacing={4}>
                     <Grid item xs={12}>
                         <h2 className="title">Dashboard</h2>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <Item
-                            className="clickable"
-                            onClick={ handleClick }
-                        >
-                            <MesActual />
-                        </Item>
+                        <Link to="./month">
+                            <Item
+                                className="clickable"
+                                onClick={ handleClickCurrentMonth }
+                            >
+                                    <MesActual />
+                            </Item>
+                        </Link>
                     </Grid>
                     <Grid item xs={12} sm={6} container spacing={4} direction="column">
                         <Grid item xs>

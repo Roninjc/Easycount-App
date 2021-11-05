@@ -6,3 +6,11 @@ html, body {
     padding: 0;
     width: 100vw;
 }
+
+hr {
+    color: gainsboro;
+}
+
+a {
+    text-decoration: none;
+}

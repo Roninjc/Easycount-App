@@ -1,12 +1,11 @@
 import React from 'react';
 import { 
     BrowserRouter as Router,
-    Switch,
-    Redirect
+    Switch
 } from 'react-router-dom';
 
 import { LoginScreen } from '../components/auth/LoginScreen';
-import { DashboardScreen } from '../components/dashboard/DashboardScreen';
+import { DashboardRoutes } from './DashboardRoutes';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
@@ -49,13 +48,11 @@ export const AppRouter = () => {
                         isAuthenticated={ !!uid }
                     />
                     <PrivateRoute
-                        exact
                         path="/"
-                        component={ DashboardScreen }
+                        component={ DashboardRoutes }
                         isAuthenticated={ !!uid }
                     />
 
-                    <Redirect to="/" />
                 </Switch>
             </div>
         </Router>
