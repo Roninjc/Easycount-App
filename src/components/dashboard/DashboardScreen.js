@@ -29,9 +29,9 @@ export const DashboardScreen = () => {
     const handleClick = () => {
         console.log('click');
     };
-    const handleClickCurrentMonth = () => {
-        console.log('month');
-    };
+    // const handleClickCurrentMonth = () => {
+    //     console.log('month');
+    // };
 
     return (
         <>
@@ -44,7 +44,7 @@ export const DashboardScreen = () => {
                         <Link to="./month">
                             <Item
                                 className="clickable"
-                                onClick={ handleClickCurrentMonth }
+                                // onClick={ handleClickCurrentMonth }
                             >
                                     <MesActual />
                             </Item>

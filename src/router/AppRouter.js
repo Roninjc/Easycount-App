@@ -11,7 +11,7 @@ import { PublicRoute } from './PublicRoute';
 
 export const AppRouter = () => {
 
-    const uid = 123;
+    const uid = null;
 
     // const dispatch = useDispatch();
     // const { checking, uid } = useSelector(state => state.auth);

@@ -1,0 +1,115 @@
+html, body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+$base-color: white;
+$dark-base-color: darken($color: $base-color, $amount: 4);
+$accent-color: teal;
+
+.auth-container {
+    background-color: $base-color;
+    height: 60vh;
+    width: 70vw;
+    /* padding: 20px; */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+}
+
+.inner {
+    // padding: 20px;
+    align-items: center;
+}
+
+.main-container {
+    color: $accent-color;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: left 1s ease;
+}
+
+.l40 {
+    left: 40%;
+}
+
+.main-container div {
+    width: 100%;
+}
+
+.second-container {
+    background-color: $accent-color;
+    // display: grid;
+    color: $dark-base-color;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    right: 0;
+    transition: right 1s ease-in-out, width 0.5s ease-in-out;
+}
+
+.l0 {
+    right: 60%;
+}
+
+.w0 {
+    width: 60%;
+}
+
+@keyframes size {
+	0% {
+        width: 40%;
+	}
+	50% {
+        width: 50%;
+	}
+	100% {
+        width: 40%;
+	}
+}
+
+.second-container div {
+    width: 100%;
+}
+
+.btn {
+    border-width: 1px;
+    border-style: solid;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    color: $dark-base-color;
+}
+
+.btn-main {
+    border-color: $accent-color;
+    background-color: $accent-color;
+}
+
+.btn-second {
+    border-color: $dark-base-color;
+    width: 50%;
+}
